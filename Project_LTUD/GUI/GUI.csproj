@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33193820-3D7A-4091-A9F4-7EA6673EF7FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BUS">
+      <HintPath>..\BUS\bin\Debug\BUS.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DAO">
+      <HintPath>..\DAO\bin\Debug\DAO.dll</HintPath>
+    </Reference>
+    <Reference Include="DTO">
+      <HintPath>..\DTO\bin\Debug\DTO.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetChuyenTrongVe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetChuyenTrongVe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTuyenTrongChuyen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTuyenTrongChuyen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTuyenTrongVe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTuyenTrongVe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmRP_TuyenTrongChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRP_TuyenTrongChuyen.Designer.cs">
+      <DependentUpon>frmRP_TuyenTrongChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRP_TuyenTrongVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRP_TuyenTrongVe.Designer.cs">
+      <DependentUpon>frmRP_TuyenTrongVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Admin.Designer.cs">
+      <DependentUpon>frm_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChuyenTrongVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChuyenTrongVe.Designer.cs">
+      <DependentUpon>frm_ChuyenTrongVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DatBanVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DatBanVe.Designer.cs">
+      <DependentUpon>frm_DatBanVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Ghe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Ghe.Designer.cs">
+      <DependentUpon>frm_Ghe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Main.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QuanLyChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QuanLyChuyen.Designer.cs">
+      <DependentUpon>frm_QuanLyChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QuanLyKhachHang.Designer.cs">
+      <DependentUpon>frm_QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QuanLyTuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QuanLyTuyen.Designer.cs">
+      <DependentUpon>frm_QuanLyTuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QuanLyVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QuanLyVe.Designer.cs">
+      <DependentUpon>frm_QuanLyVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_QuanLyXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_QuanLyXe.Designer.cs">
+      <DependentUpon>frm_QuanLyXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SuaChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaChuyen.Designer.cs">
+      <DependentUpon>frm_SuaChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_TaiXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_TaiXe.Designer.cs">
+      <DependentUpon>frm_TaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ThemChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThemChuyen.Designer.cs">
+      <DependentUpon>frm_ThemChuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Tram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Tram.Designer.cs">
+      <DependentUpon>frm_Tram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_VeDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_VeDat.Designer.cs">
+      <DependentUpon>frm_VeDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Function.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPChuyenTrongVe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPChuyenTrongVe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTuyenTrongChuyen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTuyenTrongChuyen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPTuyenTrongVe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTuyenTrongVe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmRP_TuyenTrongChuyen.resx">
+      <DependentUpon>frmRP_TuyenTrongChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRP_TuyenTrongVe.resx">
+      <DependentUpon>frmRP_TuyenTrongVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Admin.resx">
+      <DependentUpon>frm_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ChuyenTrongVe.resx">
+      <DependentUpon>frm_ChuyenTrongVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DatBanVe.resx">
+      <DependentUpon>frm_DatBanVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Ghe.resx">
+      <DependentUpon>frm_Ghe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QuanLyChuyen.resx">
+      <DependentUpon>frm_QuanLyChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QuanLyKhachHang.resx">
+      <DependentUpon>frm_QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QuanLyTuyen.resx">
+      <DependentUpon>frm_QuanLyTuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QuanLyVe.resx">
+      <DependentUpon>frm_QuanLyVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_QuanLyXe.resx">
+      <DependentUpon>frm_QuanLyXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaChuyen.resx">
+      <DependentUpon>frm_SuaChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_TaiXe.resx">
+      <DependentUpon>frm_TaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ThemChuyen.resx">
+      <DependentUpon>frm_ThemChuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Tram.resx">
+      <DependentUpon>frm_Tram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_VeDat.resx">
+      <DependentUpon>frm_VeDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RPChuyenTrongVe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPChuyenTrongVe.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTuyenTrongChuyen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTuyenTrongChuyen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPTuyenTrongVe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTuyenTrongVe.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DataSetChuyenTrongVe.xsc">
+      <DependentUpon>DataSetChuyenTrongVe.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetChuyenTrongVe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetChuyenTrongVe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetChuyenTrongVe.xss">
+      <DependentUpon>DataSetChuyenTrongVe.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTuyenTrongChuyen.xsc">
+      <DependentUpon>DataSetTuyenTrongChuyen.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTuyenTrongChuyen.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTuyenTrongChuyen.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTuyenTrongChuyen.xss">
+      <DependentUpon>DataSetTuyenTrongChuyen.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTuyenTrongVe.xsc">
+      <DependentUpon>DataSetTuyenTrongVe.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTuyenTrongVe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTuyenTrongVe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTuyenTrongVe.xss">
+      <DependentUpon>DataSetTuyenTrongVe.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16733889-illustration-of-a-bus-stop-on-a-white-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-484367010-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HereComesTheBus_Logo_F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school-bus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
